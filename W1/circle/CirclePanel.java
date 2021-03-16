@@ -22,6 +22,7 @@ public class CirclePanel extends JPanel{
     private final int CIRCLE_SIZE = 50; 
     private int x,y; 
     private Color c; 
+    private JButton chooseColor = new JButton("Choose Color");
      //--------------------------------------------------------------- 
      // Set up circle and buttons to move it. 
      //--------------------------------------------------------------- 
@@ -54,15 +55,34 @@ public class CirclePanel extends JPanel{
         
          //Create buttons to change the circle's color
         JButton gray = new JButton("Gray"); 
-        JButton pink = new JButton("Pink"); 
+        JButton pink = new JButton("Pink");
         JButton cyan = new JButton("Cyan"); 
         JButton yellow = new JButton("Yellow");
         
          //Add listeners to the buttons 
         gray.addActionListener(new ColorListener(Color.GRAY));
         pink.addActionListener(new ColorListener(Color.PINK));
+        chooseColor.addActionListener(new ColorListener(null));
         cyan.addActionListener(new ColorListener(Color.CYAN));
         yellow.addActionListener(new ColorListener(Color.YELLOW));
+        
+         //Add panel to put the buttons
+        JPanel colorButtonPanel = new JPanel(); 
+        colorButtonPanel.add(gray); 
+        colorButtonPanel.add(pink);
+        colorButtonPanel.add(chooseColor);
+        colorButtonPanel.add(cyan); 
+        colorButtonPanel.add(yellow); 
+        
+         //Add the color panel to the north part of the main panel. 
+        this.add(colorButtonPanel, "North"); 
+        
+         //Add background
+        gray.setBackground(Color.GRAY);
+        pink.setBackground(Color.PINK);
+        chooseColor.setBackground(Color.WHITE);
+        cyan.setBackground(Color.CYAN);
+        yellow.setBackground(Color.YELLOW);
     } 
      //--------------------------------------------------------------- 
      // Draw circle on CirclePanel 
@@ -102,6 +122,16 @@ public class CirclePanel extends JPanel{
         //Parameter give a color to the circle at click
         public ColorListener(Color newColor){
             this.color = newColor; 
+        }
+
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            if(color == null){
+                c = JColorChooser.showDialog(chooseColor, "Choose Color", c);
+            }else{
+                c = color;
+            }
+            repaint();
         }
     }
 } 
