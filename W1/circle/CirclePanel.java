@@ -51,6 +51,18 @@ public class CirclePanel extends JPanel{
         buttonPanel.add(down); 
          // Add the button panel to the bottom of the main panel 
         this.add(buttonPanel, "South"); 
+        
+         //Create buttons to change the circle's color
+        JButton gray = new JButton("Gray"); 
+        JButton pink = new JButton("Pink"); 
+        JButton cyan = new JButton("Cyan"); 
+        JButton yellow = new JButton("Yellow");
+        
+         //Add listeners to the buttons 
+        gray.addActionListener(new ColorListener(Color.GRAY));
+        pink.addActionListener(new ColorListener(Color.PINK));
+        cyan.addActionListener(new ColorListener(Color.CYAN));
+        yellow.addActionListener(new ColorListener(Color.YELLOW));
     } 
      //--------------------------------------------------------------- 
      // Draw circle on CirclePanel 
@@ -83,5 +95,13 @@ public class CirclePanel extends JPanel{
             y += dy; 
             repaint(); 
         } 
-    } 
+    }
+    
+    private class ColorListener implements ActionListener{
+        private Color color;
+        //Parameter give a color to the circle at click
+        public ColorListener(Color newColor){
+            this.color = newColor; 
+        }
+    }
 } 
