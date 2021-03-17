@@ -3,7 +3,7 @@
  * 
  * 
  */
-package typeofEmployee;
+package AnotherTypeofEmployee;
 //********************************************************************
 //  Firm.java       Author: Lewis/Loftus
 //

@@ -3,37 +3,42 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package typeofEmployee;
+package AnotherTypeofEmployee;
 
 //********************************************************************
-//  Executive.java       Author: Lewis/Loftus
+//  Employee.java       Author: Lewis/Loftus
 //
-//  Represents an executive staff member, who can earn a bonus.
+//  Represents a general paid employee.
 //********************************************************************
-public class Executive extends Employee{
-    private double bonus;
+
+public class Employee extends StaffMember{
+    protected String socialSecurityNumber;
+    protected double payRate;
    //-----------------------------------------------------------------
-   //  Constructor: Sets up this executive with the specified
+   //  Constructor: Sets up this employee with the specified
    //  information.
    //-----------------------------------------------------------------
-    public Executive (String eName, String eAddress, String ePhone, String socSecNumber, double rate){
-        super (eName, eAddress, ePhone, socSecNumber, rate);
-        bonus = 0;  // bonus has yet to be awarded
+    public Employee (String eName, String eAddress, String ePhone, String socSecNumber, double rate){
+        super (eName, eAddress, ePhone);
+        socialSecurityNumber = socSecNumber;
+        payRate = rate;
     }
    //-----------------------------------------------------------------
-   //  Awards the specified bonus to this executive.
+   //  Returns information about an employee as a string.
    //-----------------------------------------------------------------
-    public void awardBonus (double execBonus){
-        bonus = execBonus;
+
+    @Override
+    public String toString(){
+        String result = super.toString();
+        result += "\nSocial Security Number: " + socialSecurityNumber;
+        return result;
     }
+
    //-----------------------------------------------------------------
-   //  Computes and returns the pay for an executive, which is the
-   //  regular employee payment plus a one-time bonus.
+   //  Returns the pay rate for this employee.
    //-----------------------------------------------------------------
     @Override
     public double pay(){
-        double payment = super.pay() + bonus;
-        bonus = 0;
-        return payment;
+        return payRate;
     }
 }

@@ -3,42 +3,40 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package typeofEmployee;
+package AnotherTypeofEmployee;
 
 //********************************************************************
-//  Employee.java       Author: Lewis/Loftus
+//  StaffMember.java       Author: Lewis/Loftus
 //
-//  Represents a general paid employee.
+//  Represents a generic staff member.
 //********************************************************************
 
-public class Employee extends StaffMember{
-    protected String socialSecurityNumber;
-    protected double payRate;
+abstract public class StaffMember{
+    protected String name;
+    protected String address;
+    protected String phone;
    //-----------------------------------------------------------------
-   //  Constructor: Sets up this employee with the specified
+   //  Constructor: Sets up this staff member using the specified
    //  information.
    //-----------------------------------------------------------------
-    public Employee (String eName, String eAddress, String ePhone, String socSecNumber, double rate){
-        super (eName, eAddress, ePhone);
-        socialSecurityNumber = socSecNumber;
-        payRate = rate;
+    public StaffMember (String eName, String eAddress, String ePhone){
+        name = eName;
+        address = eAddress;
+        phone = ePhone;
     }
    //-----------------------------------------------------------------
-   //  Returns information about an employee as a string.
+   //  Returns a string including the basic employee information.
    //-----------------------------------------------------------------
-
     @Override
     public String toString(){
-        String result = super.toString();
-        result += "\nSocial Security Number: " + socialSecurityNumber;
+        String result = "Name: " + name + "\n";
+        result += "Address: " + address + "\n";
+        result += "Phone: " + phone;
         return result;
     }
-
    //-----------------------------------------------------------------
-   //  Returns the pay rate for this employee.
+   //  Derived classes must define the pay method for each type of
+   //  employee.
    //-----------------------------------------------------------------
-    @Override
-    public double pay(){
-        return payRate;
-    }
+   public abstract double pay();
 }

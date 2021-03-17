@@ -5,7 +5,7 @@
  */
 
 // *******************************************************
-package sorting;
+package PolymorphicSorting;
 import java.util.Objects;
 
 // Salesperson.java
