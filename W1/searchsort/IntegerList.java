@@ -120,12 +120,12 @@ public class IntegerList{
             }
             // Melakukan cek apakah nilai di index tengah lebih besar dari nilai yang dicari atau bukan
             // Jika iya, maka index kiri di-assign index tengah + 1
-            else if(this.list[middle] > target){
+            else if(this.list[middle] < target){
                 left = middle + 1;
             }
             // Melakukan cek apakah nilai di index tengah lebih kecil dari nilai yang dicari atau bukan
             // Jika iya, maka index kanan di-assign index tengah - 1
-            else if(this.list[middle] < target){
+            else if(this.list[middle] > target){
                 right = middle - 1;
             }
         }
