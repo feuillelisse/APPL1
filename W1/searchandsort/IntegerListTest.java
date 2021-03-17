@@ -35,7 +35,7 @@ public class IntegerListTest{
     // Do what the menu item calls for 
     //------------------------------------------------------- 
     public static void dispatch(int choice){ 
-        int loc; 
+        int loc, old, val; 
         switch(choice){
             case 0: 
                 System.out.println("Bye!"); 
@@ -47,17 +47,47 @@ public class IntegerListTest{
                 list.randomize(); 
             break; 
             case 2: 
+                System.out.println("Increasing Sorting\n");
                 list.selectionSort(); 
-            break; 
-            case 3: 
+            break;
+            case 3:
+                System.out.println("Decreasing Sorting\n");
+                list.sortDecreasing();
+            break;
+            case 4: 
                 System.out.print("Enter the value to look for: "); 
                 loc = list.search(scan.nextInt());
                 if (loc != -1) 
                     System.out.println("Found at location " + loc); 
                 else 
                     System.out.println("Not in list"); 
-            break; 
-            case 4: 
+            break;
+            case 5: 
+                System.out.print("Enter the value to look for: "); 
+                loc = list.binarySearchD(scan.nextInt());
+                if (loc != -1) 
+                    System.out.println("Found at location " + loc); 
+                else 
+                    System.out.println("Not in list"); 
+            break;
+            case 6: 
+                System.out.print("Replace First Occurence\n");
+                System.out.print("Enter the value to replace: "); 
+                old = scan.nextInt();
+                System.out.print("Replace with: "); 
+                val = scan.nextInt();
+                list.replaceFirst(old, val);
+            break;
+            case 7: 
+                System.out.print("Replace All Occurence\n");
+                System.out.print("Enter the value to replace: "); 
+                old = scan.nextInt();
+                System.out.print("Replace with: "); 
+                val = scan.nextInt();
+                list.replaceAll(old, val);
+                System.out.print("Done!\n");
+            break;
+            case 8: 
                 list.print(); 
             break; 
             default: 
@@ -72,9 +102,13 @@ public class IntegerListTest{
         System.out.println(" ===="); 
         System.out.println("0: Quit"); 
         System.out.println("1: Create a new list (** do this first!! **)"); 
-        System.out.println("2: Sort the list using selection sort"); 
-        System.out.println("3: Find an element in the list using linear search"); 
-        System.out.println("4: Print the list"); 
+        System.out.println("2: Sort the list using selection sort (increasing)");
+        System.out.println("3: Sort the list using selection sort (decreasing)");
+        System.out.println("4: Find an element in the list using linear search");
+        System.out.println("5: Find an element in the list using binary search");
+        System.out.println("6: Replace First occurance from the list");
+        System.out.println("7: Replace All occurance from the list");
+        System.out.println("8: Print the list");
         System.out.print("\nEnter your choice: "); 
     } 
 }

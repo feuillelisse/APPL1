@@ -50,9 +50,31 @@ public class IntegerList{
         return location; 
     }
     
+    // Binary search "assuming the list is sorted in decreasing order"
     public int binarySearchD(int target){
-        return 0;
-        //belum selesai
+        int left = 0, right = this.list.length - 1;
+        
+        while(left <= right){
+            int middle = left + right / 2; //mengarahkan index menjadi index di tengah
+            
+            // Melakukan cek apakah nilai di index tengah adalah nilai yang dicari atau bukan
+            // Jika iya, maka return index nilai tersebut
+            if(this.list[middle] == target){
+                return target;
+            }
+            // Melakukan cek apakah nilai di index tengah lebih besar dari nilai yang dicari atau bukan
+            // Jika iya, maka index kiri di-assign index tengah + 1
+            else if(this.list[middle] > target){
+                left = middle + 1;
+            }
+            // Melakukan cek apakah nilai di index tengah lebih kecil dari nilai yang dicari atau bukan
+            // Jika iya, maka index kanan di-assign index tengah - 1
+            else if(this.list[middle] < target){
+                right = middle - 1;
+            }
+        }
+        // Jika tidak ditemukan, maka akan mengembalikan nilai -1
+        return -1;
     }
     //------------------------------------------------------- 
     //sort the list into ascending order using the selection sort algorithm 
@@ -92,6 +114,8 @@ public class IntegerList{
         int loc = search(oldVal);
         if (loc != -1){
             this.list[loc] = newVal;
+        }else{
+            System.out.print("Not Found!");
         }
     }
     
