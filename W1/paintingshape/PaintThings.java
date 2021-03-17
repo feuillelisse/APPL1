@@ -29,9 +29,17 @@ public class PaintThings{
         Rectangle deck; 
         Sphere bigBall; 
         Cylinder tank; 
-        double deckAmt, ballAmt, tankAmt; 
-        // Instantiate the three shapes to paint 
-        // Compute the amount of paint needed for each shape 
+        double deckAmt, ballAmt, tankAmt;
+        
+        // Instantiate the three shapes to paint
+        deck = new Rectangle (20, 35);
+        bigBall = new Sphere (15);
+        tank = new Cylinder (10, 30);
+        
+        // Compute the amount of paint needed for each shape
+        deckAmt = paint.amount(deck);
+        ballAmt = paint.amount(bigBall);
+        tankAmt = paint.amount(tank);
 
         // Print the amount of paint for each. 
         DecimalFormat fmt = new DecimalFormat("0.#"); 
