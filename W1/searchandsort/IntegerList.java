@@ -55,12 +55,12 @@ public class IntegerList{
         int left = 0, right = this.list.length - 1;
         
         while(left <= right){
-            int middle = left + right / 2; //mengarahkan index menjadi index di tengah
+            int middle = left + (right - left) / 2; //mengarahkan index menjadi index di tengah
             
             // Melakukan cek apakah nilai di index tengah adalah nilai yang dicari atau bukan
             // Jika iya, maka return index nilai tersebut
             if(this.list[middle] == target){
-                return target;
+                return middle;
             }
             // Melakukan cek apakah nilai di index tengah lebih besar dari nilai yang dicari atau bukan
             // Jika iya, maka index kiri di-assign index tengah + 1
