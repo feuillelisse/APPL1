@@ -37,7 +37,7 @@ public class SpeedControlPanel extends JPanel{
     public SpeedControlPanel (){
         timer = new Timer(30, new ReboundListener()); 
 
-        this.setLayout (new BorderLayout()); 
+        this.setLayout(new BorderLayout()); 
         bouncingBall = new Circle(BALL_SIZE); 
         moveX = moveY = 5;
         
@@ -45,19 +45,19 @@ public class SpeedControlPanel extends JPanel{
         slideSlider = new JSlider(JSlider.HORIZONTAL, 0, 200, 30);
         slideSlider.setMajorTickSpacing(40);
         slideSlider.setMinorTickSpacing(10);
-        slideSlider.setPaintTicks (true);
-        slideSlider.setPaintLabels (true);
-        slideSlider.setAlignmentX (Component.LEFT_ALIGNMENT);
+        slideSlider.setPaintTicks(true);
+        slideSlider.setPaintLabels(true);
+        slideSlider.setAlignmentX(Component.LEFT_ALIGNMENT);
         
         slideLabel = new JLabel("Timer Delay");
-        slideLabel.setAlignmentX (Component.LEFT_ALIGNMENT);
+        slideLabel.setAlignmentX(Component.LEFT_ALIGNMENT);
         
         slidePanel = new JPanel();
         slidePanel.add(slideLabel);
         slidePanel.add(slideSlider);
         this.add(slidePanel, "South");
         
-        setPreferredSize (new Dimension (WIDTH, HEIGHT)); 
+        setPreferredSize(new Dimension (WIDTH, HEIGHT)); 
         setBackground(Color.black); 
         timer.start(); 
     } 
@@ -65,8 +65,8 @@ public class SpeedControlPanel extends JPanel{
     // Draw the ball 
     // -------------------- 
     @Override
-    public void paintComponent (Graphics page){
-        super.paintComponent (page); 
+    public void paintComponent(Graphics page){
+        super.paintComponent(page); 
         bouncingBall.draw(page); 
     } 
     // *************************************************** 
@@ -79,6 +79,7 @@ public class SpeedControlPanel extends JPanel{
         // ---------------------------------------------------- 
         @Override
         public void actionPerformed(ActionEvent action){
+            int slidePanelHt = slidePanel.getSize().height;
             bouncingBall.move(moveX, moveY); 
 
             // change direction if ball hits a side 
@@ -87,7 +88,7 @@ public class SpeedControlPanel extends JPanel{
             if (x < 0 || x >= WIDTH - BALL_SIZE) 
                 moveX = moveX * -1; 
 
-            if (y <= 0 || y >= HEIGHT - BALL_SIZE) 
+            if (y <= 0 || y >= (HEIGHT - slidePanelHt) - BALL_SIZE) 
                 moveY = moveY * -1; 
                 repaint(); 
         } 
@@ -103,7 +104,7 @@ public class SpeedControlPanel extends JPanel{
         // ------------------------------------------------- 
         @Override
         public void stateChanged (ChangeEvent event){ 
-            
+            timer.setDelay(slideSlider.getValue());
         } 
     } 
 } 
