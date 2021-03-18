@@ -75,18 +75,19 @@ public class IntegerList{
     }
 
     //------------------------------------------------------------ 
-    // sortDecreasing -- uses selection sort 
+    // sortDecreasing -- uses insertion sort 
     //------------------------------------------------------------     
     public void sortDecreasing(){
-        int maxIndex; 
-        for (int i = 0; i < list.length-1; i++){
-            //find largest element in list starting at location i 
-            maxIndex = i; 
-            for (int j = i+1; j < list.length; j++) 
-                if (list[j] > list[maxIndex]) 
-                    maxIndex = j; 
-                //swap list[i] with largest element 
-                swap(list, i, maxIndex);
+        int len = list.length;
+        for(int i = 1; i < len; i++){
+            int temp = list[i];
+            int j = i - 1;
+            
+            while (j >= 0 && list[j] < temp){
+                list[j + 1] = list[j];
+                j = j - 1;
+            }
+            list[j + 1] = temp;
         }
     }
 
