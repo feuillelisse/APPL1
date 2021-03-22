@@ -1,0 +1,9 @@
+<#if licenseFirst??>
+${licenseFirst}
+</#if>
+${licensePrefix}Author   : Nisa Shadrina
+${licensePrefix}NIM        : 191524053
+${licensePrefix}Tanggal  : 
+<#if licenseLast??>
+${licenseLast}
+</#if>
