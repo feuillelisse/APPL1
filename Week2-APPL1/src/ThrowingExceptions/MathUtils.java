@@ -17,10 +17,14 @@ public class MathUtils{
 //------------------------------------------------------------- 
 // Returns the factorial of the argument given 
 //------------------------------------------------------------- 
-    public static int factorial(int n){ 
-        int fac = 1; 
-        for (int i=n; i>0; i--) 
-            fac *= i; 
-            return fac; 
-    } 
+    public static int factorial(int n){
+        if(n >= 0 && n <= 16){
+            int fac = 1;
+            for (int i = n; i > 0; i--)
+                fac *= i;
+            return fac;
+        }else{
+            throw new IllegalArgumentException("Invalid input");
+        }
+    }
 }
