@@ -23,8 +23,10 @@ public class MathUtils{
             for (int i = n; i > 0; i--)
                 fac *= i;
             return fac;
+        }else if (n > 16){
+            throw new IllegalArgumentException("You can't enter value more than 16!");
         }else{
-            throw new IllegalArgumentException("Invalid input");
+            throw new IllegalArgumentException("You can't enter negative value!");
         }
     }
 }

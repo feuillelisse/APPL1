@@ -25,7 +25,7 @@ public class Factorials{
             try{
 		System.out.println("Factorial(" + val + ") = " + MathUtils.factorial(val));
             }catch(IllegalArgumentException ex){
-		System.out.println("You entered an invalid integer");
+		System.out.println(ex);
             }
             System.out.print("Another factorial? (y/n) ");
             keepGoing = scan.next();
