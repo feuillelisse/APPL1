@@ -26,7 +26,7 @@ public class Warning{
         double qualityPts; // number of quality points earned 
         double gpa; // grade point (quality point) average
         String name;
-        String inputName = "D:\\Github\\APPL1\\Week2-APPL1\\src\\ReadingfromandWritingtoTextFiles\\student.dat"; 
+        String inputName = "D:\\Github\\APPL1\\Week2-APPL1\\src\\ReadingfromandWritingtoTextFiles\\students.dat"; 
         String outputName = "D:\\Github\\APPL1\\Week2-APPL1\\src\\ReadingfromandWritingtoTextFiles\\warning.dat";
         Scanner scan;
         PrintWriter outFile;
