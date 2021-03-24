@@ -1,14 +1,9 @@
 /*
  * Nama             : Nisa Shadrina
  * NIM              : 191524053
- * Hari, Tanggal    : Senin, 22 Maret 2021
+ * Hari, Tanggal    : Rabu, 24 Maret 2021
  */
 package ReadingfromandWritingtoTextFiles;
-
-/**
- *
- * @author Nisa Shadrina
- */
 // **************************************************************************** 
 // Warning.java 
 // Reads student data from a text file and writes data to another text file. 

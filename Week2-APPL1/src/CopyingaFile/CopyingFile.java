@@ -1,15 +1,11 @@
 /*
  * Nama             : Nisa Shadrina
  * NIM              : 191524053
- * Hari, Tanggal    : Senin, 22 Maret 2021
+ * Hari, Tanggal    : Selasa, 23 Maret 2021
  * Deskripsi        : Program dapat membaca sebuah file.
  */
 package CopyingaFile;
 
-/**
- *
- * @author Nisa Shadrina
- */
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;

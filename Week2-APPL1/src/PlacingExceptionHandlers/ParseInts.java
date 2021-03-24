@@ -4,11 +4,6 @@
  * Hari, Tanggal    : Senin, 22 Maret 2021
  */
 package PlacingExceptionHandlers;
-
-/**
- *
- * @author Nisa Shadrina
- */
 // **************************************************************** 
 // ParseInts.java 
 // Reads a line of text and prints the integers in the line. 

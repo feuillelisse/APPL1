@@ -4,11 +4,6 @@
  * Hari, Tanggal    : Senin, 22 Maret 2021
  */
 package ThrowingExceptions;
-
-/**
- *
- * @author Nisa Shadrina
- */
 // **************************************************************** 
 // Factorials.java 
 // Reads integers from the user and prints the factorial of each.

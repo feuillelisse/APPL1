@@ -1,14 +1,9 @@
 /*
  * Nama             : Nisa Shadrina
  * NIM              : 191524053
- * Hari, Tanggal    : Senin, 22 Maret 2021
+ * Hari, Tanggal    : Rabu, 24 Maret 2021
  */
 package EnhancingaMovableCircle;
-
-/**
- *
- * @author Nisa Shadrina
- */
 // ****************************************************************** 
 // MoveCircle.java 
 // Uses CirclePanel to display a GUI that lets the user move 

@@ -4,21 +4,12 @@
  * Hari, Tanggal    : Senin, 22 Maret 2021
  */
 package ExceptionsArentAlwaysErrors;
-
-/**
- *
- * @author Nisa Shadrina
- */
-
 // **************************************************************** 
-// CountLetters.java 
-// 
+// CountLetters.java
 // Reads a words from the standard input and prints the number of 
-// occurrences of each letter in that word. 
-// 
+// occurrences of each letter in that word.
 // **************************************************************** 
 import java.util.Scanner;
-
 public class CountLetters{ 
     public static void main(String[] args){ 
         int[] counts = new int[26]; 

@@ -4,11 +4,6 @@
  * Hari, Tanggal    : Senin, 22 Maret 2021
  */
 package ThrowingExceptions;
-
-/**
- *
- * @author Nisa Shadrina
- */
 // **************************************************************** 
 // MathUtils.java 
 // Provides static mathematical utility functions. 

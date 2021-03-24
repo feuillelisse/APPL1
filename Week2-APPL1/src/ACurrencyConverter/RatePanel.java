@@ -1,13 +1,9 @@
 /*
  * Nama             : Nisa Shadrina
  * NIM              : 191524053
- * Hari, Tanggal    : Rabu, 23 Maret 2021
+ * Hari, Tanggal    : Rabu, 24 Maret 2021
  */
 package ACurrencyConverter;
-/**
- *
- * @author Nisa Shadrina
- */
 // ****************************************************************** 
 // RatePanel.java 
 // Panel for a program that converts different currencies to 

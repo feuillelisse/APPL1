@@ -1,13 +1,9 @@
 /*
  * Nama             : Nisa Shadrina
  * NIM              : 191524053
- * Hari, Tanggal    : Rabu, 23 Maret 2021
+ * Hari, Tanggal    : Rabu, 24 Maret 2021
  */
 package ACurrencyConverter;
-/**
- *
- * @author Nisa Shadrina
- */
 // *********************************************************************** 
 // CurrencyConverter.java 
 // Computes the dollar value of the cost of an item in another currency. 
