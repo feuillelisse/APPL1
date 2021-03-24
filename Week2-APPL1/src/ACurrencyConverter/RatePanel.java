@@ -55,18 +55,15 @@ public class RatePanel extends JPanel{
         add(result, "South");
         
         // Money Amount
-        amount = new JTextField("0");
-        amount.setPreferredSize(new Dimension(150, 30));
+        amount = new JTextField("0", 20);
         JLabel amtLabel = new JLabel("Enter the Amount : ");
         
         add(amtLabel, "West");
         add(amount, "East");
         
         // Currency
-        JLabel currencyLabel = new JLabel("Currency Name : ");
         chooser = new JComboBox(currencyName);
         chooser.addActionListener(new ComboListener());
-        add(currencyLabel, "West");
         add(chooser, "East");
         
     } 
