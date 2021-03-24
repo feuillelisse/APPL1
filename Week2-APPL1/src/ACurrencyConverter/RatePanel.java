@@ -31,7 +31,7 @@ public class RatePanel extends JPanel{
     // ------------------------------------------------------------ 
     public RatePanel (){
         
-        // Set the UI
+        // Set the GUI
         this.setBackground(new Color(255, 213, 214));
         this.setBorder(new EmptyBorder(20, 20, 0, 20));
         this.setLayout(new GridLayout(8, 8, 2, 2));
@@ -78,7 +78,7 @@ public class RatePanel extends JPanel{
         // -------------------------------------------------- 
         @Override
         public void actionPerformed (ActionEvent event){ 
-            int index = chooser.getSelectedIndex(); 
+            int index = chooser.getSelectedIndex();
             result.setText (amount.getText() + " " + currencyName[index] + 
             " = " + (rate[index] * Integer.valueOf(amount.getText())) + " U.S. Dollars"); 
         } 
