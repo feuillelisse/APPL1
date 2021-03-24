@@ -26,21 +26,21 @@ public class Warning{
         double qualityPts; // number of quality points earned 
         double gpa; // grade point (quality point) average
         String name;
-        String inputName = "D:\\Github\\APPL1\\Week2-APPL1\\src\\ReadingfromandWritingtoTextFiles\\students.dat"; 
+        String inputName = "D:\\Github\\APPL1\\Week2-APPL1\\src\\ReadingfromandWritingtoTextFiles\\student.dat"; 
         String outputName = "D:\\Github\\APPL1\\Week2-APPL1\\src\\ReadingfromandWritingtoTextFiles\\warning.dat";
-        Scanner inputFile;
+        Scanner scan;
         PrintWriter outFile;
         try{ 
             // Set up scanner to input file 
-            inputFile = new Scanner(new File(inputName));
+            scan = new Scanner(new File(inputName));
             // Set up the output file stream 
             outFile = new PrintWriter(new FileWriter(outputName));
             // Print a header to the output file 
             outFile.println("Students on Academic Warning\n");
             // Process the input file, one token at a time 
-            while(inputFile.hasNext()){ 
+            while(scan.hasNext()){ 
                 // Get the credit hours and quality points
-                String[] line = inputFile.nextLine().split(" ");
+                String[] line = scan.nextLine().split(" ");
                 name = line[0];
                 creditHrs = Integer.parseInt(line[1]); 
                 qualityPts = Double.parseDouble(line[2]);
