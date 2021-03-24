@@ -28,8 +28,8 @@ public class Warning{
         String name;
         String inputName = "D:\\Github\\APPL1\\Week2-APPL1\\src\\ReadingfromandWritingtoTextFiles\\students.dat"; 
         String outputName = "D:\\Github\\APPL1\\Week2-APPL1\\src\\ReadingfromandWritingtoTextFiles\\warning.dat";
-        Scanner inputFile = null;
-        PrintWriter outFile = null;
+        Scanner inputFile;
+        PrintWriter outFile;
         try{ 
             // Set up scanner to input file 
             inputFile = new Scanner(new File(inputName));
